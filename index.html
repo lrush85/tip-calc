@@ -12,20 +12,40 @@
 
 <body>
     <div class="container">
-        <h1>Tip Calculator</h1>
-        <label for="amount">Check Amount</label><br><br>
-        <i>$</i>
-        <input name="amount" type="text" placeholder="Amount">
-        <div></div>
-        <label for="percent">Tip Percentage</label><br><br>
-        <i>$</i>
-        <input name="percent" type="text" placeholder="Percentage">
-        <div>3</div>
-        <label for="people">Split (how many people)</label><br><br>
-        <input name="people" type="text" placeholder="Enter number of people">
-        <div>4</div>
-        <button type="submit">Calculate Total</button>
+        <div class="header">
+            <h1>Tip Calculator</h1>
+        </div>
+        <div class="content">
+            <div class="inputAddon">
+                <label for="amount">Check Amount:</label><br><br>
+                <button class="inputAddon-item" disabled>$</button>
+                <input class="inputAddon-field" id="amount" name="amount" type="number" min="0" placeholder="Amount" required onclick="validate">
+            </div>
+            <div class="inputAddon">
+                <label for="percent">Tip Percentage:</label><br><br>
+                <input class="inputAddon-field" id="percent" name="percent" type="number" min="0" placeholder="Percentage" required>
+                <button class="inputAddon-item" disabled>%</button>
+            </div>
+
+            <div class="inputAddon">
+                <label for="people">How Many People:</label><br><br>
+                <input class="inputAddon-field" id="people" name="people" type="number" min="0" placeholder="Enter number of people" required>
+            </div>
+
+            <div class="submit">
+                <button id="submit" type="submit">Calculate</button>
+            </div>
+        </div>
+
+        <div class="footer" id="total">
+            <p>$</p>
+            <p id="totalAmount"></p>
+            <p>per person</p>
+        </div>
     </div>
+
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
