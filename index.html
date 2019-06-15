@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container effect8">
         <div class="header">
             <h1>Tip Calculator</h1>
         </div>
@@ -19,7 +19,7 @@
             <div class="inputAddon">
                 <label for="amount">Check Amount:</label><br><br>
                 <button class="inputAddon-item" disabled>$</button>
-                <input class="inputAddon-field" id="amount" name="amount" type="number" min="0" placeholder="Amount" required onclick="validate">
+                <input class="inputAddon-field" id="amount" name="amount" type="number" min="0" placeholder="Amount" required>
             </div>
             <div class="inputAddon">
                 <label for="percent">Tip Percentage:</label><br><br>
@@ -34,15 +34,21 @@
 
             <div class="submit">
                 <button id="submit" type="submit">Calculate</button>
+                <button id="clear" type="submit">Clear</button>
             </div>
         </div>
 
         <div class="footer" id="total">
-            <p>$</p>
-            <p id="totalAmount"></p>
-            <p>per person</p>
+            <ul>
+                <li id="bill"></li>
+                <li id="tip"></li>
+                <li id="split"></li>
+                <li id="totalAmount"></li>
+            </ul>
         </div>
+        <div id="bottom"></div>
     </div>
+
 
 
     <script src="./assets/js/main.js"></script>
